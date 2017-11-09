@@ -1,11 +1,32 @@
 <% include ./partials/header %>
 
 <% blogposts.forEach(function(blogposts){ %>
-    <div>
-        <h2> <%= blogposts.name %></h2>
-        <img src= "<%= blogposts.image %>" >
-        <span> <%= blogposts.created %></span>
-        <p> <%= blogposts.body %> </p>
-    </div>
+
+<div class="container">
+    <div class="ui items">
+      <div class="item">
+        <div class="image">
+          <img src="<%= blogposts.image %>">
+        </div>
+        <div class="content">
+          <a class="header"><%= blogposts.name %></a>
+          <div class="meta">
+            <span><%= blogposts.created %></span>
+          </div>
+          <div class="description">
+            <p></p>
+          </div>
+          <div class="extra">
+            <p><%= blogposts.body.substring(0,120) %> ... </p>
+            <a href="/blogs/<%= blogposts._id %>">Read More</a>
+          </div>
+          </div>
+      </div>
+        <div>
+ <div>    
+    
+
+
+
 <% }) %>
 <% include ./partials/footer %>

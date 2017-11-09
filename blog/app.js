@@ -43,8 +43,20 @@ app.post("/blogs", function(req, res){
         }
     });
 });
-
-
+//SHOW ROUTE
+app.get("/blogs/:id", function(req, res){
+    blogpost.findById(req.params.id, function(err, foundBlog){
+        if(err){
+            res.redirect("/blogs")
+        } else {
+            res.render("show", {blogpost: foundBlog});
+        }
+    })
+})
+//EDIT ROUTE
+app.get("/blogs/:id/edit", function(req, res){
+    res.render("edit");
+})
 
 
 
