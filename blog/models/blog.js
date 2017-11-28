@@ -1,9 +1,12 @@
 var     mongoose    = require("mongoose");
 
-var blogpostSchema = new mongoose.Schema({
-   name: String,
+var BlogSchema = new mongoose.Schema({
+   title: String,
    image: String,
    body: String,
+   location: String,
+   lat: Number,
+   lng: Number,
    created: 
          {type: Date, default: Date.now},
    author: {
@@ -21,4 +24,4 @@ var blogpostSchema = new mongoose.Schema({
    ]
 });
 
-module.exports = mongoose.model("blogpost", blogpostSchema);
+module.exports = mongoose.model("Blog", BlogSchema);

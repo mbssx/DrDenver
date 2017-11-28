@@ -1,0 +1,41 @@
+.thumbnail img {
+    width: 100%;
+}
+.thumbnail {
+    padding: 0;
+    border-style: none;
+}
+#signup {
+    text-align: center;
+}
+
+#delete-form {
+    display: inline;
+}
+#delete-mini-button {
+    display: inline;
+}
+#comment-date {
+    display: inline;
+}
+#blog-post {
+    background-color: #FFFFFF;
+}
+
+#blog-index {
+    background-color: #FFFFFF;
+}
+#tip-jar {
+    margin-top: 50px;
+}
+#donation {
+    width: 300px;
+    margin: 30px auto 30px auto;
+}
+#map {
+    height: 400px;
+    width: 100%;
+}
+#add {
+    margin-bottom: auto;
+}
